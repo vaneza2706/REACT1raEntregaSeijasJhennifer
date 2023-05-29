@@ -1,23 +1,30 @@
-import styled from "@emotion/styled";
-import { Badge, IconButton } from "@mui/material";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import styles from "./CartWidget.module.css"
+import { BsFillCartCheckFill } from "react-icons/bs";
+import "./CartWidget.module.css";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-const StyledBadge = styled(Badge)(({ thme }) => ({
-  "& .MuiBadge-badge": {
-    right: +4,
-    top: -1,
-  },
-}));
+
 const CartWidget = () => {
+
+  const { getTotalQuantity } = useContext(CartContext)
+
+  let total = getTotalQuantity()
+
   return (
-    <div className={styles.cartContainer}>
-      <IconButton aria-label="cart">
-        <StyledBadge badgeContent={100} max={99} color="error">
-          <ShoppingCartIcon className={styles.cart}/>
-        </StyledBadge>
-      </IconButton>
-    </div>
+    <Link to="/cart">
+      <div className="container-cart">
+        <BsFillCartCheckFill
+          style={{
+            fontSize: "2rem",
+            color: "beige",
+          }}
+        />
+        <div className="bubble-counter">
+          <span>{total}</span>
+        </div>
+      </div>
+    </Link>
   );
 };
 

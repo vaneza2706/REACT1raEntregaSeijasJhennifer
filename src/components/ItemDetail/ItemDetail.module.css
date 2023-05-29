@@ -1,0 +1,30 @@
+.containerItemDetail {
+  width: 50%;
+  margin: 40px auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(33, 30, 14, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerItemDetail:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.containerImage {
+  width: 400px;
+  height: 400px;
+  margin-right: 40px;
+  border-radius: 20px;
+}
+
+.containerImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+   margin-top: 40px ;
+}
+

@@ -1,10 +1,25 @@
-const ItemList = ({saludo}) => {
+import ItemCard from "./ItemCard";
 
-  return(
-    <div>
-        <h1>{saludo}</h1>
+
+const ItemList = ({ items }) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-evenly",
+        flexWrap: "wrap",
+        minHeight: "90vh",
+        padding: "70px",
+        gap: "30px"
+      }}
+    >
+      {items.map((item) => {
+        return (
+          <ItemCard item={item} key={item.id}/>
+        );
+      })}
     </div>
-   );
+  );
 };
 
 export default ItemList;

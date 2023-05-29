@@ -1,9 +1,9 @@
 .containerNavbar{
    width: 100%;
-   height: 10vh;
+   height: 20vh;
    display: flex;
    justify-content: space-between; 
-   background-color: rgb(173, 216, 70);
+   background-color: rgb(186, 172, 154);
    
 }
 li{
@@ -16,4 +16,10 @@ li{
    align-items: center;
    gap: 40px;
 }
+a {
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   font-size: 25px;
+ }
 
